@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    background-image: url('../pictures/fuji.jpg');
+    line-height: 1.6;
+    padding: 20px;
+    text-align: center;
+  justify-content: center;
+  justify-items: center;
+background-size: cover;
+background-repeat: no-repeat;
+
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 50px;
+
+}
+    
+
+section {
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    
+}
+
+section h2 {
+    color: #333;
+    margin-bottom: 15px;
+
+}
+ 
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+
+}
+
+input[type="number"] {
+width: 100px;
+padding: 10px;
+
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 1em;
+}
+
+button {
+    background: #d6a00c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+button:hover {
+    background: #005bb55;
+    transform: scale(1.1); 
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+}

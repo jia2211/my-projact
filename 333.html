@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecommunication Billing System</title>
+    <link rel="stylesheet" href="smoke.css">
+</head>
+<body>
+    <h1 id="billing-header">Telecommunication Billing System</h1>
+
+    <section>
+        <h2 id="generate-bill-header">Generate Bill</h2>
+        <form id="billing-form">
+            <label for="usage" id="usage-label">Enter Usage in GB:</label>
+            <input type="number" name="usage" id="usage" required>
+
+            <label for="rate" id="rate-label">Rate Per GB ($):</label>
+            <input type="number" id="rate" name="rate" required>
+
+            <button type="button" onclick="generateBill()">Generate Bill</button>
+        </form>
+    </section>
+
+    <section>
+        <h3 id="total-header">Your Total</h3>
+        <p>Your total usage and price will be displayed here:</p>
+        
+        <div style="text-align: left; margin: 10px 0;">
+            <label><strong>Total Usage:</strong></label>
+            <span id="total_usage" style="font-size: 1.2em; color: #0078d7; font-weight: bold;">
+                0 GB
+            </span>
+        </div>
+
+        <div style="text-align: left; margin: 10px 0;">
+            <label><strong>Total Price:</strong></label>
+            <span id="total_price" style="font-size: 1.2em; color: #0078d7; font-weight: bold;">
+                ¥0.00
+            </span>
+        </div>
+    </section>
+
+    <section>
+        <h2 id="help-header">Help & Support</h2>
+        <form action="/cgi-bin/billing.cgi" method="post">
+            <button type="submit" name="action" value="help" id="help-button">Get Help</button>
+        </

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+    <script src="hello.js"></script> 
+</head>
+<body>
+    <form action="333.html" method="GET">
+        <div class="container">
+            <h2 id="login-header">Login</h2> 
+            <div class="form-group">
+                <input type="email" id="email" name="email" required>
+                <label for="email" id="email-label">Email</label> 
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" required>
+                <label for="password" id="password-label">Password</label> 
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <p><input type="checkbox" id="remember-me"> <label id="remember-label" for="remember-me">Remember me</label> <a href="#" id="forgot-password">Forgot password?</a></p> <!-- Added id for localization -->
+            <input id="btn" type="submit" value="Login">
+        </div>
+        <p id="register-text">If you don't have an account, <a href="#">register here</a>.</p> 
+    </form>
+
+    <script>
+        window.onload = function() {
+            var language = localStorage.getItem("language") || "en";
+
+            if (language === "ch") {
+                document.getElementById("login-header").textContent = "登录";
+                document.getElementById("email-label").textContent = "电子邮件";
+                document.getElementById("password-label").textContent = "密码";
+                document.getElementById("remember-label").textContent = "记住我";
+                document.getElementById("forgot-password").textContent = "忘记密码?";
+                document.getElementById("btn").value = "登录";
+                document.getElementById("register-text").innerHTML = "如果您没有帐户，<a href=\"#\">在这里注册</a>。";
+            } else if (language === "jap") {
+                document.getElementById("login-header").textContent = "ログイン";
+                document.getElementById("email-label").textContent = "メールアドレス";
+                document.getElementById("password-label").textContent = "パスワード";
+                document.getElementById("remember-label").textContent = "覚えておいてください";
+                document.getElementById("forgot-password").textContent = "パスワードを忘れましたか?";
+                document.getElementById("btn").value = "ログイン";
+                document.getElementById("register-text").innerHTML = "アカウントをお持ちでない場合、<a href=\"#\">こちらで登録</a>。";
+            } else if (language === "hi") {
+                document.getElementById("login-header").textContent = "लॉगिन";
+                document.getElementById("email-label").textContent = "ईमेल";
+                document.getElementById("password-label").textContent = "पासवर्ड";
+                document.getElementById("remember-label").textContent = "मुझे याद रखें";
+                document.getElementById("forgot-password").textContent = "पासवर्ड भूल गए?";
+                document.getElementById("btn").value = "लॉगिन";
+                document.getElementById("register-text").innerHTML = "अगर आपका खाता नहीं है, तो <a href=\"#\">यहां रजिस्टर करें</a>।";
+            } else {
+              
+                document.getElementById("login-header").textContent = "Login";
+                document.getElementById("email-label").textContent = "Email";
+                document.getElementById("password-label").textContent = "Password";
+                document.getElementById("remember-label").textContent = "Remember me";
+                document.getElementById("forgot-password").textContent = "Forgot password?";
+                document.getElementById("btn").value = "Login";
+                document.getElementById("register-text").innerHTML = "If you don't have an account, <a href=\"#\">register here</a>.";
+            }
+        }
+    </script>
+</body>
+</html>
